@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+   <!-- adding collapsing tool bar-->
+    <!-- you can add the background image aswell-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        >
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_scrollFlags="exitUntilCollapsed|scroll"
+        app:contentScrim="@color/colorPrimary"
+        app:expandedTitleMarginStart="48dp"
+        app:expandedTitleMarginEnd="64dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:background="@color/colorPrimaryDark"
+        app:title="Login"
+        >
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AlertDialog.AppCompat.Light">
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:id="@+id/imgid"
+                android:layout_marginBottom="25dp"
+                android:src="@mipmap/ic_launcher"/>
+                <!--add image source -->
+
+            <!--add your image to login id in drawable left-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/emailedt"
+                android:hint="enter login id"
+                android:textSize="20sp"
+                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/textfieldshape"
+                android:elevation="10dp"
+                />
+
+            <!--add your image to password in drawable left-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/passwordedt"
+                android:hint="enter password"
+                android:layout_marginTop="25dp"
+                android:textSize="20sp"
+                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:inputType="textPassword"
+                android:background="@drawable/textfieldshape"
+                android:elevation="10dp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="LOGIN"
+                android:background="@drawable/button_back"
+                android:layout_marginTop="25dp"
+                android:id="@+id/btn1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new User? sign up"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/signupbtn"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
